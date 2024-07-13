@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <main>
+        <section class="seccion_1">
+            <header>
+                <div class="logo">
+                    <a href="index.html"><img src="./images/Logo2x.svg" alt="Logo" /></a>
+                </div>
+            </header>
+
+            <div class="contenedor_entrada_texto">
+                <textarea name="contenedor_texto" id="contenedor_texto" cols="30" rows="10"
+                    placeholder="Ingrese el texto aquí"
+                    placeholder="Ingrese el texto aquí "
+                    onkeypress="return (event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32 || event.charCode == 241)"
+                    min=1 "></textarea>
+                <div class="contenedor_boton">
+                    <div class="instrucciones">
+                        <img src="./images/bi_exclamation-circle-fill.svg" alt="Alerta icono" />
+                        <label for="instrucciones">Solo letras minúsculas y sin acentos</label>
+                    </div>
+                    <div class="estilo_boton">
+                        <button id="boton_encriptar" onclick="encriptarBoton()">Encriptar</button>
+                        <button id="boton_desencriptar" onclick="desencriptarBoton()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion_2">
+            <div class="contenedor_salida_texto">
+                <div class="imagen_logo_persona">
+                    <img src="./images/Muñeco1x.svg" alt="Logo persona" />
+                </div>
+                <p id="texto_1">Ningún mensaje fue encontrado</p>
+                <p id="texto_2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <div class="ocultar">
+                    <p class="resultado_texto"></p>
+                </div>
+                <div class="ocultar">
+                    <button id="boton_copiar">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./app.js"></script>
+</html>

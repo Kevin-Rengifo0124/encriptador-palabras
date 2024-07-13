@@ -1,0 +1,420 @@
+:root {
+    --color-primario: #0A3871;
+    --color-secundario: #fff;
+    --color-terciario: #495057;
+    --fuente-inter: "Inter";
+    --font-size: 24px;
+}
+
+body,
+textarea {
+    background-color: #E9ECF8;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.logo img {
+    width: 120px;
+    height: 48px;
+    margin: 2rem 0 2rem 0;
+}
+
+.seccion_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedor_entrada_texto {
+    display: flex;
+    padding-left: 15rem;
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6rem;
+}
+
+.contenedor_entrada_texto textarea {
+    border: 0;
+    width: 100%;
+    height: 380px;
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 150%;
+    resize: none;
+    color: var(--color-primario);
+}
+
+.contenedor_entrada_texto textarea:focus {
+    outline: none;
+}
+
+.contenedor_entrada_texto textarea::placeholder {
+    color: var(--color-primario);
+}
+
+.contenedor_texto {
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    border: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #f3f5fc;
+}
+
+.contenedor_texto::placeholder {
+    color: var(--color-primario);
+}
+
+.contenedor_boton {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.instrucciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    color: var(--color-terciario);
+}
+
+.estilo_boton {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+}
+
+.estilo_boton button {
+    width: 100%;
+    height: 50px;
+    border-radius: 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.estilo_boton button:hover {
+    filter: contrast(0.8);
+    transform: scale(1.05);
+}
+
+#boton_encriptar {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    border: 0;
+}
+
+#boton_desencriptar {
+    background-color: #D8DFE8;
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+
+.seccion_2 {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.contenedor_salida_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    background-color: var(--color-secundario);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    margin-top: 2rem;
+    padding: 1rem;
+    gap: 30px;
+}
+
+.imagen_logo_persona {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.imagen_logo_persona img {
+    width: auto;
+}
+
+#texto_1 {
+    width: 60%;
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--font-size);
+    line-height: 120%;
+    text-align: center;
+    color: #343a40;
+}
+
+#texto_2 {
+    width: 80%;
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-terciario);
+}
+
+.ocultar {
+    width: 100%;
+    display: none;
+}
+
+.activate {
+    display: flex;
+    width: 100%;
+}
+
+.resultado_contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+    overflow: auto;
+    word-wrap:  break-word;
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--font-size);
+    line-height: 150%;
+    color: var(--color-terciario);
+    transition: 0.3s ease;
+}
+
+#boton_copiar {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-primario);
+    color: var(--color-primario);
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+#boton_copiar:hover {
+    filter: contrast(0.8);
+    transform: scale(1.02);
+}
+
+::-webkit-scrollbar {
+    background-color: #f5f5f5;
+    width: 10px;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #AAB2D5;
+    border-radius: 15px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .seccion_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .seccion_2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contenedor_entrada_texto {
+        padding: 0;
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contenedor_salida_texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: auto;
+        gap: 10px;
+    }
+
+    .imagen_logo_persona img {
+        display: none;
+    }
+
+    #texto_1 {
+        width: auto;
+        height: auto;
+    }
+
+    #texto_2 {
+        width: auto;
+        height: auto;
+    }
+
+    .contenedor_entrada_texto textarea {
+        border: 0;
+        width: 60%;
+        height: 140px;
+        font-family: var(--fuente-inter);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 150%;
+        resize: none;
+        color: var(--color-primario);
+    }
+
+    .contenedor_boton {
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+   
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    } 
+
+    .seccion_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .seccion_2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .contenedor_entrada_texto {
+        padding: 0;
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contenedor_salida_texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: auto;
+        gap: 10px;
+    }
+
+    .imagen_logo_persona img {
+        display: none;
+    }
+
+    #texto_1 {
+        width: auto;
+        height: auto;
+    }
+
+    #texto_2 {
+        width: auto;
+        height: auto;
+    }
+
+    .contenedor_entrada_texto textarea {
+        border: 0;
+        width: 60%;
+        height: 140px;
+        font-family: var(--fuente-inter);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 150%;
+        resize: none;
+        color: var(--color-primario);
+    }
+
+    .contenedor_boton {
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+   
+}
